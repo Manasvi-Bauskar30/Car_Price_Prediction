@@ -44,7 +44,7 @@ CAR_PRICE_PREDICTION/
 ## Installation
 1. Clone the repository:
 ```bash
-git clone <your-github-repo-url>
+git clone <https://github.com/Manasvi-Bauskar30/Car_Price_Prediction.git>
 cd CAR_PRICE_PREDICTION
 
 2. Install dependencies:
@@ -85,5 +85,5 @@ Python Scripting & Application Development
 Author
 
 Manasvi Bauskar 
-LinkedIn - 
-GitHub - 
+LinkedIn - https://www.linkedin.com/in/manasvi-bauskar-14b2b2201/
+GitHub - https://github.com/Manasvi-Bauskar30/Car_Price_Prediction
