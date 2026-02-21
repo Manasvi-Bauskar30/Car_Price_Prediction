@@ -1,4 +1,4 @@
-#  Car Price Prediction System
+#  Car Price Prediction 
 
 A professional Machine Learning web application built with **Flask** that predicts the market value of a car. The project features a robust data pipeline, custom feature engineering, and a clean, minimalist web interface.
 
@@ -40,7 +40,7 @@ CAR_PRICE_PREDICTION/
 ##  Installation & Setup
 
 1. **Clone the Repository:**
-   ```bash
+   
    git clone [https://github.com/Manasvi-Bauskar30/Car_Price_Prediction.git](https://github.com/Manasvi-Bauskar30/Car_Price_Prediction.git)
    cd CAR_PRICE_PREDICTION
 
