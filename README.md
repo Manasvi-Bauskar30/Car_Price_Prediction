@@ -1,89 +1,90 @@
-# Car Price Prediction 🚗💰
+#  Car Price Prediction System
 
-## Overview
-This project is a **Machine Learning model** that predicts car prices based on features such as brand, engine type, mileage, power, age, and number of seats. It uses **Python** and popular libraries like **scikit-learn**, **pandas**, and **pickle** for model serialization.  
+A professional Machine Learning web application built with **Flask** that predicts the market value of a car. The project features a robust data pipeline, custom feature engineering, and a clean, minimalist web interface.
 
----
 
-## Project Structure
+
+##  Project Structure
+Based on the current implementation, the directory is organized as follows:
+
 CAR_PRICE_PREDICTION/
 │
 ├── data/
-│ └── car_price_dataset.csv
+│   └── car_price_dataset.csv       # Raw training data
 │
 ├── model/
-│ ├── brand_encoder.pkl
-│ ├── engine_encoder.pkl
-│ └── car_price_model.pkl
+│   └── car_price_model.pkl         # Saved Scikit-Learn Pipeline
 │
 ├── src/
-│ ├── train.py
-│ ├── predict.py
-│ └── app.py
+│   ├── train.py                    # Script to train and save the model
+│   └── predict.py                  # CLI script for testing predictions
 │
-└── requirements.txt
-|__ README.md
+├── app.py                          # Flask Web Application
+├── EDA_Car_Price.ipynb             # Exploratory Data Analysis notebook
+├── requirements.txt                # List of required Python libraries
+└── README.md                       # Project documentation
 
 
----
 
-## Features
-- Predict car prices using:
-  - Brand
-  - Car Age
-  - Mileage
-  - Engine Type
-  - Power
-  - Seats
-- Encoders for categorical features
-- Separate scripts for training and prediction
-- Interactive app for live predictions (`app.py`)
+##  Features & Engineering
+- **Web Interface**: Clean and minimalist Flask-based UI built with Bootstrap for professional look and feel.
+- **Advanced Feature Engineering**: 
+    - `KM_per_Year`: Evaluates car usage intensity.
+    - `Power_per_Seat`: Performance-to-size ratio.
+    - `Is_New`: Boolean flag for cars under 3 years old.
+- **Smart Pipeline**: Uses a `ColumnTransformer` with `OneHotEncoder` to handle categorical features like `Brand` and `Engine_Type` automatically.
+- **Target Transformation**: Utilizes `np.log1p` during training to normalize price distribution and `np.expm1` during prediction for accurate output.
 
 ---
 
-## Installation
-1. Clone the repository:
-```bash
-git clone <https://github.com/Manasvi-Bauskar30/Car_Price_Prediction.git>
-cd CAR_PRICE_PREDICTION
+##  Installation & Setup
 
-2. Install dependencies:
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/Manasvi-Bauskar30/Car_Price_Prediction.git](https://github.com/Manasvi-Bauskar30/Car_Price_Prediction.git)
+   cd CAR_PRICE_PREDICTION
+
+
+2. **Install Dependencies:**
 pip install -r requirements.txt
 
-
-Usage
-1. Train the Model
+3. **Train the model (optional):**
 python src/train.py
 
-2. Make Predictions
-python src/predict.py
-
-3. Run the Interactive App
-python src/app.py
-
-
-Enter car details interactively to get predicted prices.
 
 
 
-Technologies Used
-Python
-Pandas
-Scikit-learn
-Pickle
+##  Usage 
 
+1. **Web Application:**
+python app.py
 
-Skills Highlight
-Data Preprocessing & Feature Engineering
-Categorical Encoding
-Machine Learning Model Training & Evaluation
-Model Serialization & Deployment
-Python Scripting & Application Development
+After running, open your browser and navigate to: http://127.0.0.1:5000
+
+2. **Command Line Prediction:**
+To test predictions directly in the terminal without the web interface: 
+python src/predict.py 
 
 
 
-Author
+##  Technologies Used
 
-Manasvi Bauskar 
-LinkedIn - https://www.linkedin.com/in/manasvi-bauskar-14b2b2201/
-GitHub - https://github.com/Manasvi-Bauskar30/Car_Price_Prediction
+Backend: Python, Flask
+
+Machine Learning: Scikit-learn (Random Forest Regressor)
+
+Data Handling: Pandas, NumPy
+
+Serialization: Joblib / Pickle
+
+Frontend: HTML5, Bootstrap 5
+
+
+
+##  Author 
+
+Manasvi Bauskar
+LinkedIn : https://www.linkedin.com/in/manasvi-bauskar-14b2b2201/
+GitHub : https://www.google.com/search?q=https://github.com/Manasvi-Bauskar30
+
+
